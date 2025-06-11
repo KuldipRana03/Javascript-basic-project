@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Shopping cart</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="nav container">
+        <a href="#" class="logo">Ecommerce</a>
+        <div class="cart-icon" id="cart-icon">
+          <i class="ri-shopping-cart-2-fill"></i>
+          <span class="cart-count" id="cart-count">0</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- products -->
+
+    <div class="products container">
+      <div class="product-card">
+        <img src="images/product-1.jpg" alt="" class="product-image" />
+        <h2 class="product-name">Mint Green Shirt</h2>
+        <div class="product-info">
+          <div class="price-data">
+            <h2 class="product-price">$299</h2>
+            <p>Details</p>
+          </div>
+          <div
+            class="add-to-cart"
+            onclick="addToCart(this.parentElement.parentElement)"
+          >
+            <i class="ri-add-line"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="images/product-2.jpg" alt="" class="product-image" />
+        <h2 class="product-name">Retro Music</h2>
+        <div class="product-info">
+          <div class="price-data">
+            <h2 class="product-price">$399</h2>
+            <p>Details</p>
+          </div>
+          <div
+            class="add-to-cart"
+            onclick="addToCart(this.parentElement.parentElement)"
+          >
+            <i class="ri-add-line"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="images/product-3.jpg" alt="" class="product-image" />
+        <h2 class="product-name">Plain Hoodie</h2>
+        <div class="product-info">
+          <div class="price-data">
+            <h2 class="product-price">$250</h2>
+            <p>Details</p>
+          </div>
+          <div
+            class="add-to-cart"
+            onclick="addToCart(this.parentElement.parentElement)"
+          >
+            <i class="ri-add-line"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="images/product-4.jpg" alt="" class="product-image" />
+        <h2 class="product-name">Golden Perfume</h2>
+        <div class="product-info">
+          <div class="price-data">
+            <h2 class="product-price">$200</h2>
+            <p>Details</p>
+          </div>
+          <div
+            class="add-to-cart"
+            onclick="addToCart(this.parentElement.parentElement)"
+          >
+            <i class="ri-add-line"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="images/product-5.jpg" alt="" class="product-image" />
+        <h2 class="product-name">Sleek Speaker</h2>
+        <div class="product-info">
+          <div class="price-data">
+            <h2 class="product-price">$600</h2>
+            <p>Details</p>
+          </div>
+          <div
+            class="add-to-cart"
+            onclick="addToCart(this.parentElement.parentElement)"
+          >
+            <i class="ri-add-line"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="images/product-6.jpg" alt="" class="product-image" />
+        <h2 class="product-name">Smart Watch</h2>
+        <div class="product-info">
+          <div class="price-data">
+            <h2 class="product-price">$490</h2>
+            <p>Details</p>
+          </div>
+          <div
+            class="add-to-cart"
+            onclick="addToCart(this.parentElement.parentElement)"
+          >
+            <i class="ri-add-line"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="images/product-7.jpg" alt="" class="product-image" />
+        <h2 class="product-name">Handbag</h2>
+        <div class="product-info">
+          <div class="price-data">
+            <h2 class="product-price">$250</h2>
+            <p>Details</p>
+          </div>
+          <div
+            class="add-to-cart"
+            onclick="addToCart(this.parentElement.parentElement)"
+          >
+            <i class="ri-add-line"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="images/product-8.jpg" alt="" class="product-image" />
+        <h2 class="product-name">Brown Shoe</h2>
+        <div class="product-info">
+          <div class="price-data">
+            <h2 class="product-price">$900</h2>
+            <p>Details</p>
+          </div>
+          <div
+            class="add-to-cart"
+            onclick="addToCart(this.parentElement.parentElement)"
+          >
+            <i class="ri-add-line"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="images/product-9.jpg" alt="" class="product-image" />
+        <h2 class="product-name">Make up things</h2>
+        <div class="product-info">
+          <div class="price-data">
+            <h2 class="product-price">$450</h2>
+            <p>Details</p>
+          </div>
+          <div
+            class="add-to-cart"
+            onclick="addToCart(this.parentElement.parentElement)"
+          >
+            <i class="ri-add-line"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cart Model -->
+    <div class="cart-model" id="cart-model">
+      <div class="cart-head">
+        <h2>Your Cart</h2>
+        <button class="close-btn">X</button>
+      </div>
+      <ul id="cart-items"></ul>
+      <div class="cart-total">Total: $<span id="total-price">0</span></div>
+      <div class="checkout-btn">Checkout</div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
